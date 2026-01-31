@@ -19,18 +19,6 @@
   <%= image_tag "logo.png", alt: "Descripción", class: "logo" %>
   <h1 class="title">Rockstar</h1>
     </div>
-    <nav>
-  <ul>
-    <% if user_signed_in? %>
-  
-  <%= button_to 'Logout', destroy_user_session_path, method: :delete %>
-
-    <% else %>
-      <li><%= link_to 'Login', new_user_session_path %></li>
-      <li><%= link_to 'Signup', new_user_registration_path %></li>
-    <% end %>
-  </ul>
-    </nav>
 
  <% if notice %> <p class="alert alert-info"><%= notice %></p> <% end %> <% if alert %> <p class="alert alert-danger"><%= alert %></p> <% end %>
 
