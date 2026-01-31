@@ -2,3 +2,37 @@
 @import "active_admin/mixins";
 @import "active_admin/base";
 
+.centered-content {
+  display: flex;
+  flex-direction: column;   // coloca los hijos en columna
+  justify-content: center;  // centra verticalmente
+  align-items: center;      // centra horizontalmente
+  min-height: 100vh;        // ocupa toda la altura de la pantalla
+  margin-top: -18em;
+
+}
+
+.brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.logo {
+  height: 8em;
+  width: auto;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  color: #007bff;
+  font-size: 4em;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+

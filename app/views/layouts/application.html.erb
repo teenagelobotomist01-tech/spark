@@ -8,10 +8,17 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
 
   <body>
-
+    <div class="brand">
+  <%= image_tag "logo.png", alt: "Descripción", class: "logo" %>
+  <h1 class="title">Rockstar</h1>
+    </div>
     <nav>
   <ul>
     <% if user_signed_in? %>
@@ -27,6 +34,9 @@
 
  <% if notice %> <p class="alert alert-info"><%= notice %></p> <% end %> <% if alert %> <p class="alert alert-danger"><%= alert %></p> <% end %>
 
-    <%= yield %>
+ <div class="centered-content"> 
+   <%= yield %>
+ </div>
+
   </body>
 </html>
