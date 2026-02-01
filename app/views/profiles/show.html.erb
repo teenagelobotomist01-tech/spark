@@ -1,0 +1,8 @@
+<h1>Bienvenido <%= @user.email %></h1>
+
+<p>Este es tu perfil.</p>
+
+<div>
+  <%= button_to "Logout", destroy_user_session_path, method: :delete %>
+</div>
+
