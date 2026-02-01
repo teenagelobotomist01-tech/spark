@@ -1,6 +1,6 @@
-<h1>Bienvenido <%= @user.email %></h1>
+<h1>Perfil de <%= @user.email %></h1>
 
-<p>Este es tu perfil.</p>
+<p>Total de créditos: <%= @user.credits %></p>
 
 <div>
   <%= button_to "Logout", destroy_user_session_path, method: :delete %>
