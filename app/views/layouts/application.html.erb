@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Souls</title>
+    <title>Rockstar</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -9,56 +9,41 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Fuente Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-</head>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- jQuery desde CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
   <body>
-
-<div class="alert-container">
-  <div id="alert-box" class="custom-alert">
-    <span class="close-btn">&times;</span>
-    Estas dentro de los primeros usuarios por lo que vas a tener una cuenta pionero cuando te registres
-  </div>
-</div>
-
+    <div class="alert-container">
+      <div id="alert-box" class="custom-alert">
+        <span class="close-btn">&times;</span>
+        Estas dentro de los primeros usuarios por lo que vas a tener una cuenta pionero cuando te registres
+      </div>
+    </div>
 
     <div class="brand">
-  <%= image_tag "logo.png", alt: "Descripción", class: "logo" %>
-  <h1 class="title">Rockstar</h1>
+      <%= image_tag "logo.png", alt: "Rockstar Logo", class: "logo" %>
+      <h1 class="title">Rockstar</h1>
     </div>
 
     <div class="flash-messages">
-  <% if notice %>
-    <p class="alert alert-info"><%= notice %></p>
-  <% end %>
+      <% if notice %>
+        <p class="alert alert-info"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
+    </div>
 
-  <% if alert %>
-    <p class="alert alert-danger"><%= alert %></p>
-  <% end %>
-</div>
-
-
-    <div class="centered-content"> 
-   
-    <%= yield %>
-          <footer class="footer">
-  <div>
-  <p class="footerlogo">
-    ★Rockstar <%= Time.now.year %>
-  <p>
-  </div>
-</footer>
- </div>
-
-
-
-
-
-
+    <div class="centered-content">
+      <%= yield %>
+      <footer class="footer">
+        <p class="footerlogo">★Rockstar <%= Time.now.year %></p>
+      </footer>
+    </div>
   </body>
 </html>

@@ -1,15 +1,13 @@
-// app/assets/stylesheets/application.scss
 @import "active_admin/mixins";
-@import "active_admin/base";
+@import "active_admin";
 
 .centered-content {
   display: flex;
-  flex-direction: column;   // coloca los hijos en columna
-  justify-content: center;  // centra verticalmente
-  align-items: center;      // centra horizontalmente
-  min-height: 100vh;        // ocupa toda la altura de la pantalla
-  margin-top: -18em;
-
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin-top: -143px;
 }
 
 .brand {
@@ -26,19 +24,17 @@
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 4em;
   font-weight: bold;
   margin: 0;
   color: #007bff;
-  font-size: 4em;
   font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
 }
 
 .footer {
-text-align: center;
+  text-align: center;
 }
+
 .footerlogo {
   font-family: 'Courier New', monospace;
   font-size: 20px;
@@ -69,19 +65,19 @@ text-align: center;
 
 .flash-messages {
   display: flex;
-  justify-content: center; // centra horizontalmente
+  justify-content: center;
   margin-top: 20px;
 }
 
 .custom-alert {
-  background-color: #ccffcc; /* verde claro */
-  border: 2px solid #006400; /* verde oscuro */
+  background-color: #ccffcc;
+  border: 2px solid #006400;
   padding: 10px 40px 10px 10px;
   position: relative;
   width: fit-content;
   border-radius: 5px;
   font-weight: bold;
-   margin: 20px auto; /* centra horizontalmente */
+  margin: 20px auto;
 }
 
 .close-btn {
@@ -93,3 +89,47 @@ text-align: center;
   color: #006400;
 }
 
+.primus, .primus2, .primus3 {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+  max-width: 950px;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+/* Ajustes específicos */
+.primus {
+  font-size: 2.5em;
+}
+
+.primus2 {
+  font-size: 2em;
+}
+
+.primus3 {
+  font-size: 2em;
+  margin-top: 2em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2em;
+  }
+
+  .logo {
+    height: 4em;
+  }
+
+  .primus, .primus2, .primus3 {
+    font-size: 1.5em;
+    margin: 1em 0;
+  }
+
+  .boton-interesado {
+    font-size: 16px;
+    padding: 12px 24px;
+    max-width: 90%;
+  }
+}
