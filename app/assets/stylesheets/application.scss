@@ -73,3 +73,23 @@ text-align: center;
   margin-top: 20px;
 }
 
+.custom-alert {
+  background-color: #ccffcc; /* verde claro */
+  border: 2px solid #006400; /* verde oscuro */
+  padding: 10px 40px 10px 10px;
+  position: relative;
+  width: fit-content;
+  border-radius: 5px;
+  font-weight: bold;
+   margin: 20px auto; /* centra horizontalmente */
+}
+
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #006400;
+}
+
