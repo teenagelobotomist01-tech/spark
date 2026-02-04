@@ -133,3 +133,77 @@
     max-width: 90%;
   }
 }
+
+.jcarousel-wrapper {
+  margin: 2em auto;
+  position: relative;
+  max-width: 600px; /* ancho máximo en desktop */
+  width: 100%;
+}
+
+.jcarousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.jcarousel ul {
+  width: 20000px; /* ancho grande para scroll */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.jcarousel li {
+  /* Force horizontal layout: use inline-block to avoid stacking
+     even if the jCarousel JS hasn't set widths yet. Remove float. */
+  float: none;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%; /* ocupa todo el ancho disponible */
+}
+
+.jcarousel img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 450px; /* limita la altura para mantener proporciones */
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .jcarousel-wrapper { max-width: 320px; }
+  .jcarousel img { max-height: 300px; }
+}
+
+.jcarousel-control-prev,
+.jcarousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-decoration: none;
+  font-size: 2em;
+  color: #007bff;
+}
+
+.jcarousel-control-prev { left: -30px; }
+.jcarousel-control-next { right: -30px; }
+
+.jcarousel-pagination {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.jcarousel-pagination a {
+  text-decoration: none;
+  color: #007bff;
+  margin: 0 5px;
+}
+
+.jcarousel-pagination a.active {
+  font-weight: bold;
+}
+
+
